@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "pollution-eye",
     "public": "dist",
     "ignore": [
       "firebase.json",
