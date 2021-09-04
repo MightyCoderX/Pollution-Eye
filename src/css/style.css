@@ -36,7 +36,7 @@ header h1
     font-weight: 400;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     font-family: 'Iceberg', cursive;
 }
 
@@ -53,9 +53,10 @@ header h1
 form
 {
     display: grid;
-    width: 20vw;
+    width: 50vh;
+    min-width: 250px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -136,6 +137,14 @@ form.search-by-city label
     justify-self: start;
 }
 
+.nearest-station-indicator
+{
+    color:white;
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin: 2rem 0;
+}
+
 main
 {
     max-width: 950px;
@@ -157,7 +166,7 @@ main
 {
     background-color: #1a1a1a;
     width: 100%;
-    padding: 2rem;
+    padding: clamp(2rem, 5vw, 5rem);
     font-size: 1.5rem;
     border-radius: 1rem;
 }

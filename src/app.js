@@ -18,7 +18,7 @@ getCurrentPosition()
     const { latitude: lat, longitude: lon } = pos.coords;
     let feed = await api.getDataByCoords(lat, lon);
     document.querySelector('header').insertAdjacentHTML('afterend', `
-        <p style="color:white; font-size: 3rem; text-align: center; margin-bottom: 2rem">Nearest station's report</p>
+        <p class="nearest-station-indicator">Nearest station's report</p>
     `);
     generateStationReport(feed);
 })

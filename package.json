@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
-    "https-server-dist": "http-server ./dist  -S -C cert.pem -o",
-    "https-server-src": "http-server ./dist  -S -C cert.pem -o",
+    "serve-dist": "http-server ./dist  -S -C cert.pem -o",
+    "serve-src": "http-server ./src  -S -C cert.pem -o",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "deploy": "firebase deploy --only hosting:pollution-eye"
   },
   "author": "MightyCoderX",
   "license": "MIT",
