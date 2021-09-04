@@ -3,3 +3,5 @@ package-lock.json
 dist/
 .env
 *.pem
+*.log
+BLANK_README.md
