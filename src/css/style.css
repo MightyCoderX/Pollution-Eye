@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+body
+{
+    background-color: #111;
+    color: #eee;
+    padding-bottom: 2rem;
+}
+
+header
+{
+    width: 100%;
+    text-align: center;
+}
+
+header h1
+{
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: 'Iceberg', cursive;
+}
+
+.filter-forms
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+form
+{
+    display: grid;
+    width: 20vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    font-size: 1.6rem;
+}
+
+form :where(input[type="text"], input[type="search"])
+{
+    padding: 1rem;
+    outline: none;
+    font-size: 1.4rem;
+    border: 2px solid #777;
+    background: transparent;
+    border-radius: 0.5rem;
+    color: inherit;
+    transition: border-color 0.3s ease;
+}
+
+form :where(input[type="text"], input[type="search"]):focus
+{
+    border-color: #003cff;
+}
+
+form.search-by-coords .coords-input
+{
+    grid-column: 1 / -1;
+    border: 2px solid #777;
+    border-radius: 0.5rem;
+    padding-right: 1rem;
+    transition: border-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+form.search-by-coords .coords-input:focus-within
+{
+    border-color: #003cff;
+}
+
+form.search-by-coords input
+{
+    max-width: 100px;
+    border: none;
+}
+
+form.search-by-coords label
+{
+    justify-self: start;
+}
+
+form.search-by-coords button[type="reset"]
+{
+    grid-column: 1 / -1;
+    width: max-content;
+    justify-self: center;
+    color: #ff5252;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: monospace;
+    line-height: 0;
+}
+
+form.search-by-city
+{
+    grid-template-columns: 1fr;
+}
+
+form.search-by-city input
+{
+    scroll-padding-right: 3rem;
+}
+
+form.search-by-city label
+{
+    justify-self: start;
+}
+
+main
+{
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.error-message
+{
+    color: red;
+    font-size: 3rem;
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.station-report-container
+{
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+.station-name
+{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.overview
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.overview .card
+{
+    display: flex;
+    height: 8rem;
+    padding: 2rem;
+    align-items: center;
+    font-weight: 400;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: #252525;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+    width: min(max-content, 250px);
+}
+
+.overview .card .value
+{
+    font-weight: 300;
+    color: #ccc;
+}
+
+.aqi-display
+{
+    border-left: 0.5rem solid;
+}
+
+.aqi-display *
+{
+    cursor: default;
+}
+
+.aqi-level
+{
+    font-weight: 500;
+}
+
+.aqi-field
+{
+    font-weight: 400;
+}
+
+.pollutants-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-content: center;
+}
+
+.pollutant-card
+{
+    padding: 2rem;
+    background-color: #252525;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pollutant-name
+{
+    font-weight: 400;
+}
+
+.pollutant-value
+{
+    color: #ccc;
+}

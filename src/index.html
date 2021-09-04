@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>City Pollution Levels</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/media-queries.css">
+
+        <script src="./js/coords-input.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>City Pollution Levels</h1>
+            
+            <div class="filter-forms">
+                <form class="search-by-city" id="formSearchByCity" action="/">
+                    <label for="city">City</label>
+                    <input type="search" name="city" id="city" required placeholder="City name here...">
+                </form>
+                <form class="search-by-coords" id="formSearchByCoords">
+                    <label for="lat">Latitude</label>
+                    <label for="lon">Longitude</label>
+                    <div class="coords-input">
+                        <input type="text" name="lat" id="lat" required placeholder="0,0000" autocomplete="off">
+                        <input type="text" name="lon" id="lon" required placeholder="0,0000" autocomplete="off">
+                        <button type="reset">x</button>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <main>
+            <template id="stationReport">
+                <div class="station-report-container">
+                    <h2 class="station-name"></h2>
+                    <div class="overview">
+                        <div class="aqi-display card" title="Air Quality Index">
+                            <p class="aqi-field">AQI - <span class="aqi-value"></span></p>
+                            <p class="aqi-level"></p>
+                        </div>
+                        <div class="last-updated card">
+                            <p class="label">Last updated</p>
+                            <div class="value"></div>
+                        </div>
+                        <div class="dominent-pollutant card">
+                            <p class="label">Dominent Pollutant</p>
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                    <div class="pollutants-grid">
+                        <template id="pollutantCard">
+                            <div class="pollutant-card">
+                                <h3 class="pollutant-name"></h3>
+                                <p class="pollutant-value"></p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+{
+    "pm25":
+    {
+        "name": "PM<sub>2.5</sub>",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Fine Particulate Matter",
+        "type": "pm"
+    },
+    "pm10":
+    {
+        "name": "PM<sub>10</sub>",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Respirable Particulate Matter",
+        "type": "pm"
+    },
+    "o3":
+    {
+        "name": "O<sub>3</sub>",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Ozone",
+        "type": "gas"
+    },
+    "no2":
+    {
+        "name": "NO<sub>2</sub>",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Nitrogen Dioxide",
+        "type": "gas"
+    },
+    "so2":
+    {
+        "name": "SO<sub>2</sub>",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Sulfur Dioxide",
+        "type": "gas"
+    },
+    "co":
+    {
+        "name": "CO",
+        "unit": "µg/m<sup>3</sup>",
+        "description": "Carbon Monoxide",
+        "type": "gas"
+    },
+    "t":
+    {
+        "name": "Temp.",
+        "unit": "°C",
+        "description": "Temperature in degrees Celsius",
+        "type": "weather"
+    },
+    "p":
+    {
+        "name": "Pressure",
+        "unit": "hPa",
+        "description": "Atmosferic Pressure in hPa",
+        "type": "weather"
+    },
+    "h":
+    {
+        "name": "Humidity",
+        "unit": "%",
+        "description": "Humidity percentage",
+        "type": "weather"
+    },
+    "w":
+    {
+        "name": "Wind",
+        "unit": "m/s",
+        "description": "Wind Speed in m/s",
+        "type": "weather"
+    },
+    "wg":
+    {
+        "name": "wg",
+        "unit": "",
+        "description": "",
+        "type": ""
+    },
+    "dew":
+    {
+        "name": "Dew",
+        "unit": "°C",
+        "description": "Dew Point in degrees Celsius",
+        "type": "weather"
+    }
+}
