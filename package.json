@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "serve-dist": "http-server ./dist  -S -C cert.pem -o",
     "serve-src": "http-server ./src  -S -C cert.pem -o",
-    "build": "webpack",
+    "build": "webpack --mode=development",
     "watch": "webpack --watch",
     "deploy": "firebase deploy --only hosting:pollution-eye"
   },

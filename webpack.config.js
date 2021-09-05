@@ -6,7 +6,6 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 
 module.exports = {
-    mode: 'development',
     entry: './src/app.js',
     devServer: {
         static: {
