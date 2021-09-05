@@ -2,7 +2,7 @@
   "hosting": {
     "site": "pollution-eye",
     "public": "dist",
-    "predeploy": "webpack --mode=production",
+    "predeploy": "npm run build",
     "ignore": [
       "firebase.json",
       "**/.*",

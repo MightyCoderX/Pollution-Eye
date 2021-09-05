@@ -7,16 +7,11 @@ const dotenv = require('dotenv');
 
 module.exports = {
     entry: './src/app.js',
-    devServer: {
-        static: {
-            directory: './dist/' 
-        }
-    },
     module: {
         rules: [
             {
                 test: /\.html$/i,
-                loader: 'html-loader',
+                loader: 'html-loader'
             }
         ],
     },

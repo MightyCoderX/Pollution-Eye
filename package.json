@@ -4,10 +4,9 @@
   "description": "An application which allows you to see the pollution levels of cities around the world!",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
-    "serve-dist": "http-server ./dist  -S -C cert.pem -o",
-    "serve-src": "http-server ./src  -S -C cert.pem -o",
-    "build": "webpack --mode=development",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "https-serve-dist": "http-server ./dist -S -C cert.pem -o",
+    "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
     "deploy": "firebase deploy --only hosting:pollution-eye"
   },
@@ -23,7 +22,8 @@
     "uuid": "^8.3.2",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.0.0"
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
