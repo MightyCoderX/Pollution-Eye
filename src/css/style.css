@@ -140,7 +140,7 @@ form.search-by-city label
 .nearest-station-indicator
 {
     color:white;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
     text-align: center;
     margin: 2rem 0;
 }
@@ -173,7 +173,7 @@ main
 
 .station-name
 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 400;
     margin-bottom: 4rem;
     text-align: center;
