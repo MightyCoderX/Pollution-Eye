@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
-    "https-serve-dist": "http-server ./dist -S -C cert.pem -o",
+    "https-serve": "http-server ./dist -S -C cert.pem -o",
     "build": "webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js",
     "watch": "webpack --watch",
     "deploy": "firebase deploy --only hosting:pollution-eye"
   },
