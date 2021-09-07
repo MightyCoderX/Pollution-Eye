@@ -2,7 +2,7 @@
   "hosting": {
     "site": "pollution-eye",
     "public": "dist",
-    "predeploy": "npm run build",
+    "predeploy": "npm run dev",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -2,6 +2,10 @@ const _ = require('lodash');
 
 const PollutionAPI = require('./js/pollution-api');
 const { getCurrentPosition } = require('./js/utils');
+require('./js/coords-input');
+
+//CSS
+require('./css/style.css');
 
 const API_TOKEN = process.env.API_TOKEN;
 
@@ -40,9 +44,11 @@ formSearchByCoords.addEventListener('submit', async e =>
 
     console.log("Submitted Coords: ", lat, lon);
 
+    document.querySelector('.nearest-station-indicator')?.remove?.();
+
     const feed = await api.getDataByCoords(lat, lon);
+    if(!generateStationReport(feed)) return;
     formSearchByCity.querySelector('#city').value = feed.city.name;
-    generateStationReport(feed);
 });
 
 const formSearchByCity = document.getElementById('formSearchByCity');
@@ -57,10 +63,13 @@ formSearchByCity.addEventListener('submit', async e =>
 
     console.log("Submitted City Name: ", city);
 
+    document.querySelector('.nearest-station-indicator')?.remove?.();
+
     const feed = await api.getDataByCity(city);
+
+    if(!generateStationReport(feed)) return;
     formSearchByCoords.querySelector('#lat').value = feed.city.coords.latitude;
     formSearchByCoords.querySelector('#lon').value = feed.city.coords.longitude;
-    generateStationReport(feed);
 });
 
 function generateStationReport(pollutionFeed)
@@ -83,7 +92,7 @@ function generateStationReport(pollutionFeed)
         errorMessage.innerText = pollutionFeed.data;
 
         mainElem.appendChild(errorMessage);
-        return;
+        return false;
     }
 
     mainElem.querySelector('.station-report-container')?.remove?.();
@@ -119,4 +128,5 @@ function generateStationReport(pollutionFeed)
     });
 
     mainElem.appendChild(newStationReport);
+    return true;
 }

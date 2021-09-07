@@ -48,6 +48,7 @@ header h1
     align-items: center;
     padding: 0 1.5rem;
     gap: 2rem;
+    margin-bottom: 4vmax;
 }
 
 form
@@ -64,7 +65,17 @@ form
     font-size: 1.6rem;
 }
 
-form :where(input[type="text"], input[type="search"])
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+    -webkit-box-shadow: 0 0 0 30px #111 inset !important;
+    -webkit-text-fill-color: #eee;
+}
+
+form input[type="text"],
+form input[type="search"]
 {
     padding: 1rem;
     outline: none;
@@ -76,7 +87,8 @@ form :where(input[type="text"], input[type="search"])
     transition: border-color 0.3s ease;
 }
 
-form :where(input[type="text"], input[type="search"]):focus
+form input[type="text"]:focus,
+form input[type="search"]:focus
 {
     border-color: #003cff;
 }
