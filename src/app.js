@@ -9,8 +9,8 @@ const API_TOKEN = process.env.API_TOKEN;
 
 const api = new PollutionAPI(API_TOKEN);
 
-const latitudeRegex =  /^[-+]?([1-8]?\d([\.,]\d+)?|90(\.0+)?)$/gi;
-const longitudeRegex =  /^[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))([\.,]\d+)?)$/gi;
+// const latitudeRegex =  /^[-+]?([1-8]?\d([\.,]\d+)?|90(\.0+)?)$/gi;
+// const longitudeRegex =  /^[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))([\.,]\d+)?)$/gi;
 
 const formSearchByCoords = document.getElementById('formSearchByCoords');
 
