@@ -1,5 +1,3 @@
-
-
 class PollutionAPI
 {
     constructor(token)

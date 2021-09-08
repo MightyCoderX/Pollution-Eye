@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 const PollutionAPI = require('./js/pollution-api');
 const { getCurrentPosition } = require('./js/utils');
 require('./js/coords-input');
