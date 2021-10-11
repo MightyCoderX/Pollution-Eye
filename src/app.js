@@ -24,7 +24,7 @@ getCurrentPosition()
     `);
     generateStationReport(feed);
 })
-.catch(err =>
+.catch(async err =>
 {
     // document.querySelector('main').innerHTML = `
     //     <p style="color:red; font-size: 3rem; text-align: center; margin-top: 20vh">Enable GPS to see the nearest station's report!</p>
@@ -32,7 +32,7 @@ getCurrentPosition()
 
     let feed = await api.getDataByIp();
     document.querySelector('header').insertAdjacentHTML('afterend', `
-        <p class="nearest-station-indicator">Nearest station's report (IP)</p>
+        <p class="nearest-station-indicator" title="Allow GPS usage for better accuracy" style="color:#fff700">⚠ Nearest station's report (IP)</p>
     `);
     generateStationReport(feed);
 });
