@@ -10,6 +10,11 @@ class PollutionAPI
     {
         return this._apiCall(`/feed/geo:${lat};${lon}/?token=${this.token}`);
     }
+
+    getDataByIp()
+    {
+        return this._apiCall(`/feed/here/?token=${this.token}`);
+    }
     
     getDataByCity(cityName)
     {

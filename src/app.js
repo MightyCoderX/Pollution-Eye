@@ -20,15 +20,21 @@ getCurrentPosition()
     const { latitude: lat, longitude: lon } = pos.coords;
     let feed = await api.getDataByCoords(lat, lon);
     document.querySelector('header').insertAdjacentHTML('afterend', `
-        <p class="nearest-station-indicator">Nearest station's report</p>
+        <p class="nearest-station-indicator">Nearest station's report (GPS)</p>
     `);
     generateStationReport(feed);
 })
 .catch(err =>
 {
-    document.querySelector('main').innerHTML = `
-        <p style="color:red; font-size: 3rem; text-align: center; margin-top: 20vh">Enable GPS to see the nearest station's report!</p>
-    `;
+    // document.querySelector('main').innerHTML = `
+    //     <p style="color:red; font-size: 3rem; text-align: center; margin-top: 20vh">Enable GPS to see the nearest station's report!</p>
+    // `;
+
+    let feed = await api.getDataByIp();
+    document.querySelector('header').insertAdjacentHTML('afterend', `
+        <p class="nearest-station-indicator">Nearest station's report (IP)</p>
+    `);
+    generateStationReport(feed);
 });
 
 formSearchByCoords.addEventListener('submit', async e =>
